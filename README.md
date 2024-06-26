@@ -14,3 +14,19 @@ This portfolio is crafted using [Next.js](https://nextjs.org/)
 Feel free to use it as a template for your own portfolio or any other projects. You are granted the freedom to modify, distribute, and use the code for any purpose, unleashing your creativity without any restrictions.
 
 If you have any improvements, ideas or find any bugs, don't hesitate to submit a pull request or open an issue.
+
+## 🛠️ Development setup
+
+### Step 1 - Install dependencies
+
+```bash
+pnpm install
+```
+
+### Step 2 - Run the development server
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the portfolio.
