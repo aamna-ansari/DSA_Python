@@ -69,7 +69,7 @@ class LinkedList:
         return False    
 
     def insert(self, index, value): #insert at specific index
-        if index < 0 or index > self.length:
+        if index < 0 or index >= self.length:
             return False
         if index == 0:
             return self.prepend(value) # first 
@@ -88,9 +88,9 @@ class LinkedList:
             return self.pop_first()
         if index == self.length - 1:
             return self.pop()
-        pre = self.get(index - 1)
-        temp = pre.next
-        pre.next = temp.next
+        pre = self.get(index - 1) # 4 node
+        temp = pre.next   # 5 node 
+        pre.next = temp.next 
         temp.next = None
         self.length -= 1
         return temp
