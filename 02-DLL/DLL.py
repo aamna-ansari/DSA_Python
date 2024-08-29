@@ -60,6 +60,24 @@ class DoublyLinkedList:
             self.head = new_node
         self.length += 1
         return True
+    
+    # Popfirst Node
+
+    def pop_first(self):
+        if self.length == 0:
+            return True
+        temp = self.head 
+        if self.length == 1:
+            self.head == None
+            self.tail == None
+        else:
+            self.head = self.head.next
+            self.head.pre = None
+            temp.next = None
+        self.length +=1
+        return True
+
+        
 
         
         
@@ -72,8 +90,11 @@ my_doubly_linked_list = DoublyLinkedList(8)
 # print('Length:', my_doubly_linked_list.length)
 
 #append method for append the node
-my_doubly_linked_list.append(2)
+my_doubly_linked_list.append(1)
 my_doubly_linked_list.pop()
-my_doubly_linked_list.prepend(1)
+my_doubly_linked_list.prepend(2)
+my_doubly_linked_list.prepend(3)
+my_doubly_linked_list.pop_first()
+
 my_doubly_linked_list.print_list()
 
