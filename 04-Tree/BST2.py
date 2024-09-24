@@ -34,10 +34,18 @@ class BST:
 
     # Contain method
      def contain(self, value):
-          new_node = Node(value)
           if self.root is None:
-               self.root = new_node
-               return True
+               return False
+          temp = self.root
+          while temp is not None:
+               if value < temp.value:
+                    temp = temp.left
+               elif value > temp.value:
+                    temp = temp.right
+               else: 
+                    return True
+          return False
+               
           
 
 my_BST  = BST()
@@ -47,3 +55,6 @@ my_BST.insert(3)
 print(my_BST.root.value)
 print(my_BST.root.left.value)
 print(my_BST.root.right.value)
+
+print(my_BST.contain(2))
+print(my_BST.contain(5))
