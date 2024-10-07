@@ -13,6 +13,15 @@ class HashTable:
             print(i, ":", val)
 
 
+    def set_item(self, key, value):
+        index = self.__hash(key)
+        if self.data_map[index] == None:
+            self.data_map[index] = []
+        self.data_map[index].append([key, value])
+
+
 my_hash_table = HashTable()
+my_hash_table.set_item('Bolts', 1400)
+my_hash_table.set_item('washers', 500)
 
 my_hash_table.print_table()
