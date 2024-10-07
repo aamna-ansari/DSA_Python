@@ -33,6 +33,7 @@ class BST:
             
 
     # Contain method
+    
      def contain(self, value):
           if self.root is None:
                return False
@@ -55,6 +56,5 @@ my_BST.insert(3)
 print(my_BST.root.value)
 print(my_BST.root.left.value)
 print(my_BST.root.right.value)
-
 print(my_BST.contain(2))
 print(my_BST.contain(5))
