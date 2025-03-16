@@ -29,4 +29,7 @@ for i in range(4):  # Controls the rows
         print(i+1, end=" ")  # Print numbers starting from 1
     print()
 
-    
+    for i in range(4):  # Controls the rows
+        for j in range(4 - i):  # Controls the numbers in each row
+            print(j+1, end=" ")  # Print numbers starting from 1
+        print()
