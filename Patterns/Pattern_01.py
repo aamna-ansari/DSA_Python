@@ -18,3 +18,8 @@ for i in range(4):
     for j in range(i+1):
         print("*", end=" ")
     print()
+
+for i in range(4):  # Controls the rows
+    for j in range(i + 1):  # Controls the numbers in each row
+        print(j + 1, end=" ")  # Print numbers starting from 1
+    print()  # Move to the next line
