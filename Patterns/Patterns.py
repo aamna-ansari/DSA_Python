@@ -42,14 +42,23 @@ for i in range(4):  # Controls the rows
 
 
 # Pattern 7
-for i in range(6): # outer loop 
-    # space inner 
-    for j in range(6-i): # inner loop
+# Upper pyramid
+for i in range(6):  # Outer loop (rows)
+    for j in range(6 - i):  # Leading spaces
         print(" ", end=" ")
-    # Star 
-    for j in range(2* i+1):
+    
+    for j in range(2 * i + 1):  # Stars
         print("*", end=" ")
-    # Space
-    for j in range(6-i):
-        print(" ", end=" ")
+
     print()
+
+# Lower inverted pyramid
+for i in range(5, -1, -1):  # Start from 5 to match the upper pyramid
+    for j in range(6 - i):  # Leading spaces
+        print(" ", end=" ")
+
+    for j in range(2 * i + 1):  # Stars
+        print("*", end=" ")
+
+    print()
+
